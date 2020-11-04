@@ -1,3 +1,33 @@
+config:
+  request:
+    iplimit:
+      apis: /user/register/
+      intervalMinutes: 1
+      maxRequestCount: 20
+  response:
+    message:
+      seeother: 您频繁进⾏注册，请求已被拒绝！
+      unauthorize: 您的请求没有授权，请登录或注册后再访问！
+  cookie:
+    name:
+      auth: auth
+      token: token
+  email:
+    host: smtp.126.com
+    sender:
+      name: aolibaigei@126.com
+      password: Aa123456789
+    templates:
+      checkcode:
+        title: 注册验证码
+        content: 您好，本次登录的验证码为：%s
+  code:
+    length: 6
+    fetch:
+      interval: 60
+    validate:
+      expire: 600
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
