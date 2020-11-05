@@ -12,15 +12,7 @@ config:
     name:
       auth: auth
       token: token
-  email:
-    host: smtp.126.com
-    sender:
-      name: aolibaigei@126.com
-      password: Aa123456789
-    templates:
-      checkcode:
-        title: 注册验证码
-        content: 您好，本次登录的验证码为：%s
+      
   code:
     length: 6
     fetch:
@@ -39,3 +31,8 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mail:
+    host: smtp.126.com
+    username: aolibaigei@126.com
+    password: YEOHQCXIDWYXRUVV
+    default-encoding: UTF-8
